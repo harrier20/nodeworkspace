@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>플랫포머 게임</title>
+<style>
+body{margin:0px;}    
+#wrapper{
+    width:1280px;
+    height:960px;
+    background-image: url(./images/BG.png);
+    margin:auto;
+    position: relative;
+}    
+</style>
+<script src="./js/Block.js"></script>
+<script>
+function init(){    
+    createBlock();
+}
+
+//블럭생성
+function createBlock(){
+    //constructor(container, src, width, height, x, y)
+    for(var i=0;i<10;i++){
+        var block = new Block(document.getElementById("wrapper"), "./images/StoneBlock.png", 70, 70, 50+(70*i), 600);    
+    }
+}
+
+function createHero(){
+    var hero
+}
+
+
+function gameLoop(){//게임의 심장(FPS를 결정함)
+    
+}    
+window.addEventListener("load", function(){
+    init();
+    //setInterval("gameLoop()",10);
+});
+</script>
+</head>
+<body>
+    <div id="wrapper"></div>    
+</body>
+</html>
